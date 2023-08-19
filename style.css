@@ -250,7 +250,7 @@ section .title::after{
 }
 
 .about .title::after{
-    content:  "Siapa Saya?";
+    content:  "Keahlian";
 }
 
 .about .about-content,
@@ -310,20 +310,52 @@ section .title::after{
 
 
 /* service menu */
-.services{
-    color: #fff;
-    background: #111;
-}
 
-.services .title::before{
-    background: #fff;
-}
 
 .services .title::after{
-    background: #111;
-    content: "Tentang Layanan" ;
+    content: "Keahlian" ;
 }
 
+ .services .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .services .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .services .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .services .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .services .intro {
+    padding: 20px;
+  }
+  
+  .services .intro h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .services .intro p {
+    font-size: 14px;
+    color: #777;
+  }
+  
 /* .services .services-content .card{
     width: calc(33% - 20px);
     background: #222;
@@ -643,6 +675,10 @@ footer span a:hover{
        
     }
 
+    .services .card {
+        flex-basis: calc(50% - 20px);
+    }
+
     .home .home-content a{
         font-size: 20px;
     }
@@ -661,4 +697,8 @@ footer span a:hover{
         font-size: 25px;
        
     }
+
+    .services .card {
+        flex-basis: 100%;
+      }
 } 
